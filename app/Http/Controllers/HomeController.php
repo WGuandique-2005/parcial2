@@ -24,4 +24,9 @@ class HomeController extends Controller
     {
         return view('signup');
     }
+
+    public function createPost()
+    {
+        return view('createPost');
+    }
 }

@@ -268,16 +268,14 @@
     <nav class="navbar">
         <div class="navbar-container">
             <a href="/home" class="logo">PlotChat</a>
-            
-            <button class="mobile-menu-toggle" id="mobileMenuToggle">☰</button>
-            
+                        
             <div class="search-bar">
                 <input type="text" placeholder="Buscar en PlotChat">
             </div>
             
             <div class="nav-buttons">
-                <button class="nav-button active" title="Inicio">🏠</button>
-                <button class="nav-button create" title="Crear">+ Crear</button>
+                <button class="nav-button active" title="Inicio" id="btnHome">🏠</button>
+                <button class="nav-button create" title="Crear" id="btnCrear">+ Crear</button>
                 <div class="user-dropdown">
                     <div class="user-avatar" id="userAvatar">U</div>
                     <div class="user-menu" id="userMenu">
@@ -294,18 +292,18 @@
             </div>
         </div>
     </nav>
-    
-    <!-- Mobile search -->
-    <div class="mobile-search" id="mobileSearch">
-        <input type="text" placeholder="Buscar en PlotChat">
-    </div>
-    
-    <!-- Contenido principal -->
-    <main>
-        <!-- Tu contenido aquí -->
-    </main>
 
     <script>
+        const btnHome = document.getElementById('btnHome');
+        btnHome.addEventListener('click', function() {
+            window.location.href = '/home';
+        });
+
+        const btnCrear = document.getElementById('btnCrear');
+        btnCrear.addEventListener('click', function() {
+            window.location.href = '/createPost';
+        });
+
         // Menú desplegable del usuario
         const userAvatar = document.getElementById('userAvatar');
         const userMenu = document.getElementById('userMenu');
