@@ -119,6 +119,7 @@
             border: 1px solid var(--border-color);
         }
 
+
         .achievements-section {
             background: var(--light-color);
             padding: 2rem;
@@ -193,7 +194,7 @@
                 <h2>Tu primera publicación</h2>
                 <p>Comienza a compartir tus historias con la comunidad</p>
                 <button
-                    style="background: var(--primary-color); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; margin-top: 1rem;" id="createPost">
+                    style="background: var(--primary-color); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; margin-top: 1rem; cursor: pointer;" id="createPost">
                     Crear Publicación
                 </button>
             </div>
@@ -221,7 +222,7 @@
                 <h2>Guardados</h2>
                 <p>Tus favoritos, siempre a mano</p>
                 <button
-                    style="background: var(--primary-color); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; margin-top: 1rem;" id="viewHome">
+                    style="background: var(--primary-color); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; margin-top: 1rem; cursor: pointer;" id="viewHomeSaved">
                     Vea a Inicio
                 </button>
             </div>
@@ -249,7 +250,7 @@
                 <h2>No hay comentarios</h2>
                 <p>Tus opiniones hacen crecer a la comunidad. Participa dejando tus ideas en las publicaciones.</p>
                 <button
-                    style="background: var(--primary-color); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; margin-top: 1rem;" id="viewHome">
+                    style="background: var(--primary-color); color: white; padding: 1rem 2rem; border: none; border-radius: 8px; margin-top: 1rem; cursor: pointer;" id="viewHomeComment">
                     Vea a Inicio
                 </button>
             </div>
@@ -286,6 +287,20 @@
         const tabButtons = document.querySelectorAll('.tab-button');
         const tabContents = document.querySelectorAll('.tab-contents');
 
+        const createPostButton = document.getElementById('createPost');
+        createPostButton.addEventListener('click', () => {
+            window.location.href = '/createPost';
+        });
+
+        const viewHomeSavedButton = document.getElementById('viewHomeSaved');
+        viewHomeSavedButton.addEventListener('click', () => {
+            window.location.href = '/home';
+        });
+        const viewHomeCommentButton = document.getElementById('viewHomeComment');
+        viewHomeCommentButton.addEventListener('click', () => {
+            window.location.href = '/home';
+        });
+
         const setActiveTab = (activeTab) => {
             tabButtons.forEach((button) => {
                 button.classList.remove('active');
@@ -307,17 +322,6 @@
         // Mostrar solo la primera pestaña al cargar
         window.addEventListener('DOMContentLoaded', () => {
             setActiveTab(tabsPost);
-        });
-
-        // Redirigir al crear publicación
-        const createPostButton = document.getElementById('createPost');
-        createPostButton.addEventListener('click', () => {
-            window.location.href = '/createPost';
-        });
-        // Redirigir al ver publicaciones
-        const viewHomeButton = document.getElementById('viewHome');
-        viewHomeButton.addEventListener('click', () => {
-            window.location.href = '/home';
         });
     </script>
 
