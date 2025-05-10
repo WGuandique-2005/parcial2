@@ -353,7 +353,6 @@
             });
         }
 
-        // Validación del formulario de newsletter
         const newsletterForm = document.querySelector('.newsletter-form');
         
         newsletterForm.addEventListener('submit', function(e) {

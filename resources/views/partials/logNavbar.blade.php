@@ -279,7 +279,7 @@
                 <div class="user-dropdown">
                     <div class="user-avatar" id="userAvatar">U</div>
                     <div class="user-menu" id="userMenu">
-                        <a href="#" class="user-menu-item">👤 Mi perfil</a>
+                        <a href="/userProfile" class="user-menu-item">👤 Mi perfil</a>
                         <a href="#" class="user-menu-item">📝 Mis historias</a>
                         <a href="#" class="user-menu-item">🔔 Notificaciones</a>
                         <div class="user-menu-divider"></div>
